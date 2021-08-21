@@ -8,11 +8,6 @@ namespace Figures
         #region Public Fields
 
         /// <summary>
-        /// Площадь треугольника
-        /// </summary>
-        public double Square { get; private set; }
-
-        /// <summary>
         /// Первая сторона
         /// </summary>
         public double FirstSide { get; private set; }
