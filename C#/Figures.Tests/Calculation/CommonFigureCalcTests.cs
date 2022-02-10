@@ -49,8 +49,8 @@ namespace Figures.Tests.Calculation
                 new Circle(radius)
             };
 
-            var a = Process.CalculateSquareSum(figures);
-            Assert.AreEqual(expectedCircleSquare + expectedTriangleSquare, a, "Площадь вычислена неверно");
+            var sum = Process.CalculateSquareSum(figures);
+            Assert.AreEqual(expectedCircleSquare + expectedTriangleSquare, sum, "Площадь вычислена неверно");
         }
     }
 }
