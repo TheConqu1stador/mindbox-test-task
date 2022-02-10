@@ -58,9 +58,9 @@ namespace Figures
         {
             if (IsRectangular)
             {
-                var arr = new[] { FirstSide, SecondSide, ThirdSide };
-                Array.Sort(arr);
-                return 0.5 * arr[0] * arr[1];
+                var sides = new[] { FirstSide, SecondSide, ThirdSide };
+                Array.Sort(sides);
+                return 0.5 * sides[0] * sides[1];
             }
             else
             {
