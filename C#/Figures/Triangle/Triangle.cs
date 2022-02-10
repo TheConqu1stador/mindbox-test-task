@@ -56,8 +56,17 @@ namespace Figures
         /// </summary>
         public double CalculateSquare()
         {
-            double semiPerimeter = (FirstSide + SecondSide + ThirdSide) / 2;
-            return Math.Sqrt(semiPerimeter * (semiPerimeter - FirstSide) * (semiPerimeter - SecondSide) * (semiPerimeter - ThirdSide));
+            if (IsRectangular)
+            {
+                var arr = new[] { FirstSide, SecondSide, ThirdSide };
+                Array.Sort(arr);
+                return 0.5 * arr[0] * arr[1];
+            }
+            else
+            {
+                double semiPerimeter = (FirstSide + SecondSide + ThirdSide) / 2;
+                return Math.Sqrt(semiPerimeter * (semiPerimeter - FirstSide) * (semiPerimeter - SecondSide) * (semiPerimeter - ThirdSide));
+            }
         }
 
         #endregion
